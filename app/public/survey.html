@@ -25,7 +25,7 @@
 		<h2>Survey Questions</h2>
 		<hr>
 
-		<h3><strong>About You</strong></h3>
+		<h3><strong>About You</strong></h3>7
 		<h4>Name (Required)</h4>
 		<input type="text" name="" id="name" class="form-control" required >
 
@@ -153,8 +153,7 @@
 		<br>
 
 		<!-- Submit Button -->
-		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
- Submit</button>
+		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
 
 		<hr>
 	    <footer class="footer">
@@ -230,7 +229,7 @@
       			$('#matchName').html(data.matchName);
 		    	$("#matchImg").attr("src", data.matchImage);
 		    	// Pop open the modal dialog
-      			$('#resultsModal').modal('open');
+		    	$("#resultsModal").modal('toggle');
       		});
 		});
 
