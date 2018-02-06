@@ -16,10 +16,10 @@ module.exports = function(app) {
 	app.post('/data/friends', function(req, res) {
 		// Capture the user input object
 		var userInput = req.body;
-		console.log('userInput = ' + JSON.stringify(userInput));
+		// console.log('userInput = ' + JSON.stringify(userInput));
 
 		var userResponses = userInput.scores;
-		console.log('userResponses = ' + userResponses);
+		// console.log('userResponses = ' + userResponses);
 
 		// Compute best friend match
 		var matchName = '';
@@ -35,7 +35,7 @@ module.exports = function(app) {
 			for (var j = 0; j < userResponses.length; j++) {
 				diff += Math.abs(friends[i].scores[j] - userResponses[j]);
 			}
-			console.log('diff = ' + diff);
+			// console.log('diff = ' + diff);
 
 			// If lowest difference, record the friend match
 			if (diff < totalDifference) {
@@ -51,6 +51,7 @@ module.exports = function(app) {
 
 		// Add new user
 		friends.push(userInput);
+
 
 		// Send appropriate response
 		res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
